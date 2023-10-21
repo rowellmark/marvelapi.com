@@ -1,0 +1,799 @@
+/*!***************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/scss/global.scss ***!
+  \***************************************************************************************************************/
+:root {
+  /** Font default */
+  --font-family-default: "Roboto", sans-serif;
+  --font-family-title: "Rozha One", serif;
+  --font-size-default: 16px;
+  --font-size-title: 18px;
+  --font-color-default: #ffffff;
+  --font-color-title: #6c757d;
+  /** Use for input, button, and any other element */
+  --primary: #000000;
+  --secondary: #cfb579;
+  --success: #28a745;
+  --info: #17a2b8;
+  --warning: #ffc107;
+  --danger: #dc3545;
+  --light: #f8f9fa;
+  --dark: #343a40;
+  --default-transition: .3s cubic-bezier(.4, 0, .2, 1);
+  --transition: all 0.4s ease-in-out;
+}
+
+.object-fit-cover {
+  object-fit: cover;
+}
+
+.object-position-center {
+  object-position: center;
+}
+
+.object-position-left {
+  object-position: left;
+}
+
+.object-position-top {
+  object-position: top;
+}
+
+.block {
+  display: block;
+}
+
+.inline-block {
+  display: inline-block;
+}
+
+.inline {
+  display: inline;
+}
+
+.flex {
+  display: flex;
+}
+
+.inline-flex {
+  display: inline-flex;
+}
+
+.table {
+  display: table;
+}
+
+.inline-table {
+  display: inline-table;
+}
+
+.inline-flex {
+  display: inline-flex;
+}
+
+.flex-row {
+  flex-direction: row;
+}
+
+.flex-col {
+  flex-direction: column;
+}
+
+.content-center {
+  align-content: center;
+}
+
+.content-start {
+  align-content: flex-start;
+}
+
+.content-end {
+  align-content: flex-end;
+}
+
+.content-between {
+  align-content: space-between;
+}
+
+.content-around {
+  align-content: space-around;
+}
+
+.content-evenly {
+  align-content: space-evenly;
+}
+
+.items-start {
+  align-items: flex-start;
+}
+
+.items-end {
+  align-items: flex-end;
+}
+
+.items-center {
+  align-items: center;
+}
+
+.items-baseline {
+  align-items: baseline;
+}
+
+.items-stretch {
+  align-items: stretch;
+}
+
+.justify-start {
+  justify-content: flex-start;
+}
+
+.justify-end {
+  justify-content: flex-end;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.justify-between {
+  justify-content: space-between;
+}
+
+.justify-around {
+  justify-content: space-around;
+}
+
+.justify-evenly {
+  justify-content: space-evenly;
+}
+
+.justify-items-start {
+  justify-items: start;
+}
+
+.justify-items-end {
+  justify-items: end;
+}
+
+.justify-items-center {
+  justify-items: center;
+}
+
+.justify-items-stretch {
+  justify-items: stretch;
+}
+
+.flex-wrap-wrap {
+  flex-wrap: wrap;
+}
+
+.flex-wrap-nowrap {
+  flex-wrap: nowrap;
+}
+
+.flex-width-auto {
+  flex-basis: 0;
+  flex-grow: 1;
+}
+
+.flex-grow-1 {
+  flex-grow: 1;
+}
+
+.static {
+  position: static;
+}
+
+.fixed {
+  position: fixed;
+}
+
+.absolute {
+  position: absolute;
+}
+
+.relative {
+  position: relative;
+}
+
+.sticky {
+  position: sticky;
+}
+
+.mt-15 {
+  margin-top: max(0.938vw, 15px);
+}
+
+.w-100 {
+  width: 100%;
+}
+
+.w-50 {
+  width: 50%;
+}
+
+.w-25 {
+  width: 25%;
+}
+
+.h-100 {
+  height: 100%;
+}
+
+.h-auto {
+  height: auto;
+}
+
+.m-center {
+  margin: 0 auto;
+}
+
+.overflow-hidden {
+  overflow: hidden;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.top-0 {
+  top: 0;
+}
+
+.bottom-0 {
+  bottom: 0;
+}
+
+.left-0 {
+  left: 0;
+}
+
+.right-0 {
+  right: 0;
+}
+
+@keyframes MoveScaleUpInitial {
+  to {
+    transform: translate3d(0, -105%, 0) scale3d(1, 2, 1);
+    opacity: 0;
+  }
+}
+@keyframes MoveScaleUpEnd {
+  from {
+    transform: translate3d(0, 100%, 0) scale3d(1, 2, 1);
+    opacity: 0;
+  }
+  to {
+    transform: translate3d(0, 0, 0);
+    opacity: 1;
+  }
+}
+/* Global */
+body {
+  font-family: var(--font-family-default);
+  font-size: var(--font-size-default);
+  background: #000;
+  color: var(--font-color-default);
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.default-container {
+  padding-left: max(5.886vw, 89px);
+  padding-right: max(5.886vw, 89px);
+}
+
+.default-button a {
+  display: inline-block;
+  font-size: max(1.587vw, 24px);
+  color: #fff;
+  text-decoration: none;
+  border-radius: 8px;
+  background: #F0141E;
+  padding: max(1.058vw, 16px) max(2.116vw, 32px);
+  transition: var(--transition);
+}
+.default-button a:hover {
+  background: #fff;
+  color: #000;
+}
+
+.img-responsive {
+  max-width: 100%;
+}
+
+/* Global */
+.header {
+  padding: 3.638vw 0;
+  z-index: 999;
+  transition: var(--transition);
+}
+.header__logo {
+  width: max(13.492vw, 204px);
+}
+.header__nav ul li {
+  padding: 0 1.157vw;
+}
+.header__nav ul li a {
+  font-size: 1.587vw;
+  color: #fff;
+  position: relative;
+  text-decoration: none;
+  transition: var(--transition);
+}
+.header__nav ul li a::after {
+  display: block;
+  transition: var(--transition);
+  content: "";
+  width: 0;
+  height: 2px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background: #fff;
+}
+.header__nav ul li a:hover {
+  color: #f0141e;
+}
+.header__nav ul li a:hover::after {
+  background: #f0141e;
+  width: 100%;
+}
+.header--float {
+  background: #000;
+  padding: 1.323vw 0;
+}
+.header--float .header__logo {
+  width: max(9.921vw, 150px);
+}
+
+.hero__slideshow img {
+  z-index: 5;
+}
+.hero__slideshow::after {
+  display: block;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: 10;
+  background: linear-gradient(180deg, rgba(3, 3, 3, 0) 0.14%, #030303 75.56%);
+  width: 100%;
+  height: 38.558vw;
+  content: "";
+}
+.hero__slideshow::before {
+  display: block;
+  z-index: 11;
+  content: "";
+  width: calc(100% - 5.886vw);
+  height: max(0.397vw, 6px);
+  border-radius: 5px;
+  background: linear-gradient(90deg, #F0141E 41.9%, rgba(240, 20, 30, 0) 97.68%);
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+.hero__content {
+  z-index: 500;
+  color: #fff;
+  top: 26.124vw;
+  left: 0;
+  width: 100%;
+}
+.hero__content h1 {
+  font-family: var(--font-family-title);
+  font-size: max(6.614vw, 75px);
+  line-height: 1.4;
+}
+.hero__content p {
+  font-size: max(2.116vw, 22px);
+  padding: max(1.19vw, 18px) 0 max(3.968vw, 60px);
+}
+
+.comics__row {
+  margin: 0 max(-2.149vw, -32.5px);
+  padding-top: max(3.704vw, 56px);
+}
+.comics__col {
+  width: 25%;
+  padding: max(3.704vw, 56px) max(2.149vw, 32.5px);
+}
+.comics__col a {
+  display: block;
+  width: 100%;
+}
+.comics__image img {
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+.comics__content h3 {
+  line-height: 1.2;
+  font-weight: 600;
+  font-size: max(1.587vw, 16px);
+  padding: max(1.19vw, 18px) 0 0;
+}
+.comics__content ul {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: max(2.91vw, 25px) 0 0;
+}
+.comics__content ul li {
+  line-height: 1.1;
+  font-size: max(1.323vw, 14px);
+}
+.comics__content ul li span {
+  opacity: 0.5;
+}
+
+.marvelHeroes {
+  padding: max(5.556vw, 84px) 0 0 0;
+}
+.marvelHeroes h2 {
+  font-family: var(--font-family-title);
+  font-size: max(6.349vw, 96px);
+  text-align: center;
+}
+.marvelHeroes__row {
+  margin: 0 max(-2.149vw, -32.5px);
+  padding-top: max(3.472vw, 52.5px);
+}
+.marvelHeroes__col {
+  width: 25%;
+  padding: max(3.472vw, 52.5px) max(2.149vw, 32.5px);
+}
+.marvelHeroes__col a {
+  display: block;
+  width: 100%;
+}
+.marvelHeroes__img img {
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+.marvelHeroes__content {
+  padding: max(0.661vw, 10px) 0 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.marvelHeroes__content h3 {
+  font-size: max(2.315vw, 24px);
+  font-weight: 600;
+  line-height: 1.2;
+}
+.marvelHeroes__content span {
+  font-size: max(1.852vw, 19px);
+  font-weight: 600;
+  line-height: 1.2;
+  display: block;
+  padding: max(0.661vw, 10px) 0 0;
+}
+.marvelHeroes__content--year {
+  color: #F0141E;
+  font-size: max(1.455vw, 17px);
+  padding: 0.7vw 0;
+}
+
+.latestNews h2 {
+  font-size: 2.381vw;
+}
+.latestNews__col {
+  width: 50%;
+  padding: max(1.72vw, 26px) 0;
+}
+.latestNews__col a {
+  color: #fff;
+  text-decoration: none;
+}
+.latestNews__img {
+  width: max(14.22vw, 215px);
+  flex-shrink: 0;
+}
+.latestNews__content {
+  padding: 0 0 0 max(1.389vw, 21px);
+}
+.latestNews__content h3 {
+  font-size: max(1.587vw, 17px);
+  line-height: 1.3;
+}
+
+.marvelInsider {
+  padding: max(7.407vw, 112px) 0 0;
+}
+.marvelInsider__img {
+  width: 51.786vw;
+}
+.marvelInsider__content {
+  width: 48.214vw;
+  text-align: center;
+}
+.marvelInsider__content h4 {
+  font-size: max(2.116vw, 25px);
+  color: #F0141E;
+  text-transform: uppercase;
+  padding: 0 0 max(2.116vw, 32px) 0;
+}
+.marvelInsider__content h5 {
+  font-size: max(2.646vw, 30px);
+  font-weight: 600;
+  padding: 0 0 max(2.116vw, 19px);
+}
+.marvelInsider__content p {
+  font-size: max(1.984vw, 21px);
+  padding: 0 0 max(3.439vw, 52px);
+}
+
+.footer {
+  padding: max(3.902vw, 59px) 0 max(5.159vw, 78px);
+}
+.footer h2 {
+  font-size: max(1.587vw, 18px);
+}
+.footer__logo {
+  width: max(17.328vw, 262px);
+  margin: 0 auto;
+  padding: 0 0 max(3.704vw, 56px);
+}
+.footer__nav {
+  width: 30.952vw;
+}
+.footer__nav ul {
+  display: flex;
+  flex-flow: row wrap;
+}
+.footer__nav ul li {
+  width: 50%;
+  padding: max(0.529vw, 8px) 0;
+}
+.footer__nav ul li a {
+  color: #fff;
+  font-size: max(1.587vw, 16px);
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: var(--transition);
+}
+.footer__nav ul li a:hover {
+  color: #F0141E;
+}
+.footer__text {
+  width: 33.399vw;
+  flex-shrink: 1;
+}
+.footer__text--set {
+  padding: max(1.257vw, 19px);
+}
+.footer__text--set--img {
+  width: 8.135vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.footer__text--set--det {
+  padding-left: 1.323vw;
+}
+.footer__text--set--det p {
+  font-size: max(1.257vw, 16px);
+  opacity: 0.5;
+  line-height: 1.7;
+}
+.footer__smi ul {
+  margin: max(2.116vw, 32px) 0 0;
+}
+.footer__smi ul li {
+  padding: 0 max(0.529vw, 8px);
+}
+.footer__smi ul li:first-child {
+  padding-left: 0;
+}
+.footer__smi ul li a {
+  transition: var(--transition);
+}
+.footer__smi ul li a img {
+  width: max(3.307vw, 35px);
+}
+.footer__smi ul li a:hover {
+  opacity: 0.8;
+}
+.footer__copyright {
+  padding: max(8.532vw, 129px) 0 0;
+}
+.footer__copyright ul li {
+  opacity: 0.5;
+  padding: max(0.86vw, 13px) max(1.653vw, 25px);
+  font-size: max(1.323vw, 20px);
+}
+.footer__copyright ul li:first-child {
+  padding-left: 0;
+}
+.footer__copyright ul li:nth-child(5) {
+  padding-right: 0;
+}
+.footer__copyright ul li a {
+  color: #fff;
+  text-decoration: none;
+  transition: var(--transition);
+}
+.footer__copyright ul li a:hover {
+  color: #F0141E;
+}
+
+/*******************************************************
+ *
+ * 4. IP Styles
+ *
+ *******************************************************/
+.ip-banner {
+  position: relative;
+  width: 100%;
+}
+.ip-banner::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+  background: rgba(0, 0, 0, 0.6);
+}
+.ip-banner canvas {
+  display: block;
+  position: relative;
+  z-index: 0;
+  width: 100%;
+  min-height: 250px;
+  background-color: var(--dark);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.ip-banner .container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+}
+.ip-banner h1 {
+  font-weight: 700;
+  font-size: 32px;
+  text-align: center;
+  color: #FFFFFF;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  line-height: 1.7;
+}
+.ip-banner h1 span {
+  display: block;
+  font-size: 24px;
+  font-weight: 400;
+  text-transform: none;
+  letter-spacing: 0.01em;
+}
+
+/* Adjust minimum height of page area */
+#content-sidebar,
+#content-full {
+  min-height: 500px;
+  margin-top: 20px;
+}
+
+/** Adjust width of content columns **/
+#content-sidebar #content {
+  width: 77.08%;
+}
+
+#content-full #content {
+  width: 100%;
+}
+
+/* Adjust width of sidebar */
+.sidebar {
+  width: 20.83%;
+}
+
+/* fullwidth template */
+.page-template-template-fullwidth #content {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+.page-template-template-fullwidth #content ihf-search[data-eureka-id*=""].ihf-eureka {
+  margin-left: -15px;
+  margin-right: -15px;
+}
+
+/* Adjust line height of page elements */
+#content h4,
+aside h4,
+#content p,
+aside p,
+#content blockquote,
+aside blockquote,
+#content ul,
+aside ul,
+#content fieldset,
+aside fieldset,
+#content form,
+aside form,
+#content ol,
+aside ol,
+#content dl,
+aside dl,
+#content dir,
+aside dir,
+#content menu,
+aside menu {
+  line-height: 1.7;
+}
+
+/* Style .entry-title(post/page) and .archive-title(category/archive/etc) main headings (h1) */
+/* Styles for category/archive/search/etc subheadings (h2) */
+/* iPad(landscape) | iPad(landscape) | Galaxy Tab 4 (landscape) | Galaxy Tab 3 (landscape) */
+/* iPad(portrait) | Galaxy Tab 4(portrait)  */
+@media only screen and (max-width: 991px) {
+  /* The following are used on inner pages. Please edit carefully. */
+  .inner {
+    width: 100%;
+  }
+  #content-sidebar,
+#content-full {
+    width: 100%;
+  }
+  .outer {
+    width: 100%;
+    min-width: 100%;
+  }
+  #content-sidebar #content {
+    width: 100%;
+  }
+  .footer {
+    width: 100%;
+    background: #d7d7d7;
+    padding: 30px 0;
+  }
+  .footer p {
+    line-height: 1.7;
+    text-align: center;
+  }
+  .footer .footernav {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .footer .footernav li {
+    padding: 10px;
+  }
+  .footer .footer-logo {
+    width: 100% !important;
+    float: none !important;
+  }
+}
+/* Galaxy Tab 3(portrait) | Galaxy S5(landscape) */
+@media only screen and (max-width: 767px) {
+  .ip-banner .container {
+    width: 100%;
+  }
+}
+/* Galaxy S5(portrait) | iPod Touch(landscape) | iPod Touch(portrait) */

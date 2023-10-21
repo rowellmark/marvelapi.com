@@ -1,0 +1,36 @@
+{
+  "name": "marvel",
+  "version": "1.0.0",
+  "description": "AIOS Starter theme with CSS/SASS and JavaScript compiled using webpack 5.",
+  "main": "js/build/main.js",
+  "scripts": {
+    "build": "webpack --mode production",
+    "dev": "webpack --mode development",
+    "watch": "webpack --watch --mode development",
+    "build-dev": "webpack --config webpack.config.dev.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://gitlab.forge99.com/rowell.blanca/aios-starter-pack"
+  },
+  "author": "Rowell Mark M. Blanca",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.18.6",
+    "@babel/preset-env": "^7.18.6",
+    "babel-loader": "^8.2.5",
+    "clean-webpack-plugin": "^4.0.0",
+    "css-loader": "^6.8.1",
+    "css-minimizer-webpack-plugin": "^4.0.0",
+    "fs-extra": "^11.1.1",
+    "mini-css-extract-plugin": "^2.7.6",
+    "progress-bar-webpack-plugin": "^2.1.0",
+    "rimraf": "^5.0.1",
+    "sass": "^1.53.0",
+    "sass-loader": "^13.3.2",
+    "style-loader": "^3.3.3",
+    "webpack": "^5.88.2",
+    "webpack-cli": "^4.10.0",
+    "webpackbar": "^5.0.2"
+  }
+}

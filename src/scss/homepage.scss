@@ -1,0 +1,105 @@
+.slideshow {
+    display: block;
+    position: relative;
+    z-index: 1;
+
+    canvas {
+        width: 100%;
+        height: auto;
+    }
+
+    .slide-content {
+        position: absolute;
+        top: 50%;
+        left: 0;
+        width: 100%;
+        transform: translate(0, -50%);
+        text-align: center;
+
+        .ai-logo {
+            font-size: 60px;
+            color: #009bbb;
+            padding-bottom: 20px;
+        }
+
+        h1 {
+            font-size: 40px;
+            font-weight: 700;
+            text-transform: uppercase;
+        }
+
+        p {
+            font-size: 20px;
+            font-weight: 600;
+            padding: 20px 0;
+        }
+
+        .landing-page-phone {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            .landing-phone {
+                padding: 0 20px;
+                font-size: 20px;
+
+                a {
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+}
+
+
+@media only screen and (max-width: 1199px) {}
+
+@media only screen and (max-width: 991px) {
+
+}
+
+/* Galaxy Tab 3(portrait) | Galaxy S5(landscape) */
+@media only screen and (max-width: 767px) {
+    .slideshow {
+
+        canvas {
+            min-height: 500px;
+        }
+
+        .slide-content {
+   
+
+            .ai-logo {
+                font-size: 40px;
+            }
+
+            h1 {
+                font-size: 23px;
+            }
+
+            p {
+                line-height: 1.7;
+                font-size: 16px;
+            }
+
+            .landing-page-phone {
+                display: flex;
+                flex-flow: column;
+                justify-content: center;
+                align-items: center;
+
+                .landing-phone {
+                    padding: 0 20px;
+                    font-size: 20px;
+
+                    a {
+                        text-decoration: none;
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* Galaxy S5(portrait) | iPod Touch(landscape) | iPod Touch(portrait) */
+@media only screen and (max-width: 480px) {}
