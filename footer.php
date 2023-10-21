@@ -1,5 +1,9 @@
 
+	<?php if(! is_home() ) : ?>
+	</div>
 
+	<?php endif;?>
+	
 	<footer class="footer">
 		
 		<div class="footer__container default-container">

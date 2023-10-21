@@ -27,3 +27,14 @@
 		</div>
 	</header>
 	
+
+	<?php if(! is_home() ) : ?>
+	<div class="ip-banner relative">
+		<canvas width="1600" height="550"></canvas>
+		<img src="<?= get_stylesheet_directory_uri()?>/assets/images/banner.jpg" alt="slide1" class="block w-100 absolute h-100 top-0 left-0 object-fit-cover object-position-center "> 
+	</div>
+
+	<div class="default-container">
+
+	<?php endif;?>
+

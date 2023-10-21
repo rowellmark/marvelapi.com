@@ -19,9 +19,7 @@
 <section class="comics">
    <div class="default-container comics__container">
         <div class="comics__row flex flex-wrap-wrap">
-            
-
-        <?php 
+             <?php 
                 echo do_shortcode('
                 [marvel_api endpoint="comics" limit="8"]
                     [loop_start]
@@ -33,18 +31,18 @@
                             <div class="comics__content">
                                 <h3>[title]</h3>
                                 <ul>
-                                    <li><span>126 min</span></li>
+                                    <li><span>[author]</span></li>
                                     <li>|</li>
-                                    <li><span>6 MAY, 2022</span></li>
+                                    <li><span>[date]</span></li>
                                 </ul>
                             </div>
                         </div><!-- end of col -->
-
-                        
-                       
                     [loop_end]
                 [/marvel_api]');
             ?>
+        </div>
+        <div class="comics__more">
+            <a href="/more-comics/">More...</a>
         </div>
     </div>
 </section>
@@ -61,19 +59,47 @@
                 [marvel_api endpoint="characters" limit="8"]
                     [loop_start]
                         <div class="marvelHeroes__col">
-                            <div class="marvelHeroes__img relative">
-                                <canvas class="block w-100 h-auto" width="285" height="350"></canvas>
-                                [thumbnail]
-                            </div>
-                            <div class="marvelHeroes__content">
-                                <div class="marvelHeroes__content--title">
-                                    <h3>[name]</h3>
-                                    <span>[real_name]</span>
+                            <a href="#" class="block relative globPopup">
+                                <div class="marvelHeroes__img relative">
+                                    <canvas class="block w-100 h-auto" width="285" height="350"></canvas>
+                                    [thumbnail]
                                 </div>
-                                <div class="marvelHeroes__content--year">
-                                    [year]
+                                <div class="marvelHeroes__content">
+                                    <div class="marvelHeroes__content--title">
+                                        <h3>[name]</h3>
+                                        <span>[real_name]</span>
+                                    </div>
+                                    <div class="marvelHeroes__content--year">
+                                        [year]
+                                    </div>
                                 </div>
-                            </div>
+
+                                <div class="HeroesMoreInfo">
+                                    <div class="profile-photo">
+                                        [thumbnail]
+                                    </div>
+                                    <div class="profile-content">
+                                        <h2>[name]</h2>
+                                        <p>[description]</p>
+                                        <h3>Series</h3>
+                                        <ul>
+                                            [stories]
+                                        </ul>
+
+                                        <h3>Comics Lists</h3>
+                                        <ul>
+                                            [comics]
+                                            
+                                        </ul>
+                                        <h3>Stories</h3>
+                                        <ul>
+                                            [stories]
+                                        </ul>
+                                    </div>
+
+                                    <div class="popup-modal-dismiss">close</div>
+                                </div>
+                            </a>
                         </div><!-- end of col -->
                     [loop_end]
                 [/marvel_api]');
@@ -88,74 +114,41 @@
 
         <div class="latestNews__row flex flex-wrap-wrap">
 
-            <div class="latestNews__col">
-                <a href="#" class="flex block w-100">
-                    <div class="latestNews__img relative">
-                        <canvas class="block w-100 h-auto" width="215" height="126"></canvas>
-                        <img src="<?= get_stylesheet_directory_uri()?>/assets/images/placeholder-image.jpg" alt="slide1" class="block w-100 absolute h-100 top-0 left-0 object-fit-cover object-position-top" width="215" height="126"> 
-                    </div>
-                    <div class="latestNews__content">
-                        <h3>Dave Filoni Defends Star Wars’ ‘Flexible’ Tone Amid Criticism</h3>
-                    </div>
-                </a>
-            </div>
-            <div class="latestNews__col">
-                <a href="#" class="flex block w-100">
-                    <div class="latestNews__img relative">
-                        <canvas class="block w-100 h-auto" width="215" height="126"></canvas>
-                        <img src="<?= get_stylesheet_directory_uri()?>/assets/images/placeholder-image.jpg" alt="slide1" class="block w-100 absolute h-100 top-0 left-0 object-fit-cover object-position-top" width="215" height="126"> 
-                    </div>
-                    <div class="latestNews__content">
-                        <h3>Dave Filoni Defends Star Wars’ ‘Flexible’ Tone Amid Criticism</h3>
-                    </div>
-                </a>
-            </div>
-            <div class="latestNews__col">
-                <a href="#" class="flex block w-100">
-                    <div class="latestNews__img relative">
-                        <canvas class="block w-100 h-auto" width="215" height="126"></canvas>
-                        <img src="<?= get_stylesheet_directory_uri()?>/assets/images/placeholder-image.jpg" alt="slide1" class="block w-100 absolute h-100 top-0 left-0 object-fit-cover object-position-top" width="215" height="126"> 
-                    </div>
-                    <div class="latestNews__content">
-                        <h3>Dave Filoni Defends Star Wars’ ‘Flexible’ Tone Amid Criticism</h3>
-                    </div>
-                </a>
-            </div>
-            <div class="latestNews__col">
-                <a href="#" class="flex block w-100">
-                    <div class="latestNews__img relative">
-                        <canvas class="block w-100 h-auto" width="215" height="126"></canvas>
-                        <img src="<?= get_stylesheet_directory_uri()?>/assets/images/placeholder-image.jpg" alt="slide1" class="block w-100 absolute h-100 top-0 left-0 object-fit-cover object-position-top" width="215" height="126"> 
-                    </div>
-                    <div class="latestNews__content">
-                        <h3>Dave Filoni Defends Star Wars’ ‘Flexible’ Tone Amid Criticism</h3>
-                    </div>
-                </a>
-            </div>
-            <div class="latestNews__col">
-                <a href="#" class="flex block w-100">
-                    <div class="latestNews__img relative">
-                        <canvas class="block w-100 h-auto" width="215" height="126"></canvas>
-                        <img src="<?= get_stylesheet_directory_uri()?>/assets/images/placeholder-image.jpg" alt="slide1" class="block w-100 absolute h-100 top-0 left-0 object-fit-cover object-position-top" width="215" height="126"> 
-                    </div>
-                    <div class="latestNews__content">
-                        <h3>Dave Filoni Defends Star Wars’ ‘Flexible’ Tone Amid Criticism</h3>
-                    </div>
-                </a>
-            </div>
-            <div class="latestNews__col">
-                <a href="#" class="flex block w-100">
-                    <div class="latestNews__img relative">
-                        <canvas class="block w-100 h-auto" width="215" height="126"></canvas>
-                        <img src="<?= get_stylesheet_directory_uri()?>/assets/images/placeholder-image.jpg" alt="slide1" class="block w-100 absolute h-100 top-0 left-0 object-fit-cover object-position-top" width="215" height="126"> 
-                    </div>
-                    <div class="latestNews__content">
-                        <h3>Dave Filoni Defends Star Wars’ ‘Flexible’ Tone Amid Criticism</h3>
-                    </div>
-                </a>
-            </div>
+            <?php 
 
+                    $args = array(
+                       'category_name'   => 'latest-news',
+                        'post_type'       => 'post',
+                        'posts_per_page'  => -1,
+                        'orderby'         => 'date',
+                        'order'           => 'DESC' 
+                    );
 
+                    $query = new WP_Query($args);
+                    
+                    if ($query->have_posts()) {
+                        while ($query->have_posts()) {
+                            $query->the_post();
+                            // Your post content here
+
+                            echo ' <div class="latestNews__col">
+                                <a href="'.get_the_permalink().'" class="flex block w-100">
+                                    <div class="latestNews__img relative">
+                                        <canvas class="block w-100 h-auto" width="215" height="126"></canvas>
+                                        '.get_the_post_thumbnail(null, 'full').'
+                                    </div>
+                                    <div class="latestNews__content">
+                                        <h3>'. get_the_title() .'</h3>
+                                    </div>
+                                </a>
+                            </div>';
+                        }
+                    } else {
+                        // No posts found
+                    }
+
+                    wp_reset_postdata();
+            ?>
         </div>
     </div>
 </section>

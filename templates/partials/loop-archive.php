@@ -15,7 +15,7 @@
 					<?php if ( has_excerpt( get_the_ID() ) ) : ?>
 						<?php the_excerpt(); ?>
 					<?php else: ?>
-						<?php echo ai_starter_theme_truncate_string( strip_tags( strip_shortcodes( get_the_content() ) ), 244, "..." ) ?>
+						<?php echo  get_the_content() ?>
 					<?php endif ?>
 					<p><a class="archive-more" href="<?php the_permalink() ?>">Read more</a></p>
 				</div>

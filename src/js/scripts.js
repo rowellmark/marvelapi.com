@@ -34,12 +34,25 @@
         
         heroesPopup = () => {
             
-            $('.modad').magnificPopup({
-                type: 'inline',
-                preloader: false,
-                focus: '#username',
-                modal: true
+            $('.globPopup').on('click', function (e) {
+                e.preventDefault(); // Prevent the default action (e.g., following a link)
+                // Open the Magnific Popup with your custom options
+
+                $this = $(this).find('.HeroesMoreInfo');
+
+                $.magnificPopup.open({
+                    items: {
+                        src: $this // Use the ID of the content you want to display in the popup
+                    },
+                    type: 'inline',
+                    preloader: false,
+                    focus: '#username',
+                    modal: true
+                });
             });
+
+
+            
             $(document).on('click', '.popup-modal-dismiss', function (e) {
                 e.preventDefault();
                 $.magnificPopup.close();
